@@ -17,6 +17,8 @@ def parsing__arguments():
                         help='parameter for GAE (default: 1.00)')
     parser.add_argument('--num_processes', type=int, default=4, metavar='N',
                         help='how many training processes to use (default: 4')
+    parser.add_argument('--train_step', type=int, default=20, 
+                        help='number of forward steps before update model once (default: 20)')
     
     return parser.parse_args()
 
@@ -25,23 +27,21 @@ def main(args):
     ## threading 
     print_title()
     
-    env = gym.make("Tennis-v4")
+    env = gym.make("PongDeterministic-v4")
     
     print_info(env)
     
     # * Make Shared Model (pytorch share_memory)
     shared_model = A3C(env.observation_space.shape[2], env.action_space)
     shared_model.share_memory()
-    
-    sharedcheck = Value('d', 0)
-    
+        
     processes = []
     for rank in range(args.num_processes):
-        p = Process(target=train, args = (rank, shared_model))
+        p = Process(target=train, args = (args, rank, shared_model))
         p.start()
         processes.append(p)
     
-    main_thread(env, shared_model)
+    main_thread(args, env, shared_model)
     
     for p in processes:
         p.join()

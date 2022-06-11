@@ -8,12 +8,12 @@ class A3C(nn.Module):
 
     def __init__(self, num_inputs, action_space):
         super(A3C, self).__init__()
-        self.conv1 = nn.Conv2d(num_inputs, 32, 4, stride=2, padding=1)
-        self.conv2 = nn.Conv2d(32, 32, 3, stride=2, padding=1)
-        self.conv3 = nn.Conv2d(32, 32, 3, stride=2, padding=1)
-        self.conv4 = nn.Conv2d(32, 32, 3, stride=2, padding=1)
+        self.conv1 = nn.Conv2d(num_inputs, 8, 6, stride=2, padding=1)
+        self.conv2 = nn.Conv2d(8, 8, 6, stride=2, padding=1)
+        self.conv3 = nn.Conv2d(8, 8, 3, stride=2, padding=1)
+        self.conv4 = nn.Conv2d(8, 8, 3, stride=2, padding=1)
 
-        self.gru = nn.GRUCell(800, 256)
+        self.gru = nn.GRUCell(800, 256) 
 
         num_outputs = action_space.n
         self.critic_linear = nn.Linear(256, 1)
@@ -24,14 +24,19 @@ class A3C(nn.Module):
 
         self.train()
 
-    def forward(self, inputs):
-        inputs, hx = inputs
+    def forward(self, state_, hx_):
+        inputs, hx = state_, hx_
         x = F.relu(self.conv1(inputs))
         x = F.relu(self.conv2(x))
         x = F.relu(self.conv3(x))
-        x = F.relu(self.conv4(x))
-
+        x = F.relu(self.conv4(x)) 
+        # print(x.shape)
+        #x = F.relu(self.conv5(x)) # 1 x 32 x 5 x 5
         x = x.view(-1, 800)
         hx = self.gru(x, hx)
         x = hx
-        return self.critic_linear(x), self.actor_linear(x), hx
+        
+        critic_output = self.critic_linear(x)
+        action_output = self.actor_linear(x)
+        
+        return critic_output, action_output, hx
