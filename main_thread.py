@@ -17,9 +17,6 @@ def main_thread(args, env, shared_model):
     episode_reward = 0
 
     while True:
-        
-
-        model.load_state_dict(shared_model.state_dict())
         model.eval()
         
         if done:
@@ -30,12 +27,24 @@ def main_thread(args, env, shared_model):
         
 
         for t in range(args.train_step):
+            model.load_state_dict(shared_model.state_dict())
+            
             env.render()
             value, logit, hx = model(state, hx)
             prob = F.softmax(logit, dim=-1)
-            action = prob.multinomial(num_samples=1).detach()
-
-            observation, reward, done, info = env.step(action.numpy())
+            # print("prob shape : ", prob.shape)
+            action = prob.max(1)[1].detach().numpy() + 1
+            
+            '''
+            action 0 -> stay
+            action 1 -> stay
+            action 2 -> up
+            action 3 -> down
+            action 4 -> up
+            aciton 5 -> down
+            '''
+            # print("action : ", action)
+            observation, reward, done, info = env.step(action)
             episode_reward += reward
             if done:
                 print("Episode finished after {} timesteps".format(step+1))
@@ -62,6 +71,7 @@ def main_thread(args, env, shared_model):
             state = encoding_observation(observation)
             step += 1
             
+            # print(list(model.parameters())[0][0][0][0][0:4])
         
             
         

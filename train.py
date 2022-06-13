@@ -14,6 +14,8 @@ def ensure_shared_grads(model, shared_model):
         
 def train(args, rank=None, shared_model = None):
     env = gym.make("PongDeterministic-v4")
+    env.seed(8967 + rank * 5)
+
     model = A3C(env.observation_space.shape[2], env.action_space)
     optimizer = optim.Adam(shared_model.parameters(), lr=args.lr)    
     episode = 0
@@ -43,21 +45,28 @@ def train(args, rank=None, shared_model = None):
             prob = F.softmax(logit, dim=-1)
             log_prob = F.log_softmax(logit, dim=-1)
             entropy = -(log_prob * prob).sum(1, keepdim=True)
-            entropies.append(entropy)
-            
-            action = prob.multinomial(num_samples=1).detach()
+            if rank %2 == 0:
+                action = prob.multinomial(num_samples=1).detach()
+            else:
+                action = prob.max(1)[1].detach()
+                action = action.unsqueeze(0)                
+                
             log_prob = log_prob.gather(1, action)
             
             #action = env.action_space.sample()
-            observation, reward, done, info = env.step(action.numpy())
+            observation, reward, done, info = env.step(action.numpy() + 1)
             
             # Clip Reward -1 ~ +1
             reward = max(min(reward, 1), -1)
+            
             if done:
                 observation_reset = env.reset()
                 state = encoding_observation(observation_reset)
             
-            state = encoding_observation(observation)
+            else:
+                state = encoding_observation(observation)
+            
+            entropies.append(entropy)
             values.append(value)
             log_probs.append(log_prob)
             rewards.append(reward)
@@ -71,13 +80,17 @@ def train(args, rank=None, shared_model = None):
         if not done:
             value, _, _ = model(state, hx)
             R = value.detach()
-            
+        
         values.append(R)
         policy_loss = 0
         value_loss = 0
         GAE = torch.zeros(1,1)
         
         for i in reversed(range(len(rewards))):
+            if (rank == 0 or rank == 1) and i == 0 :{
+                print(f"rank : {rank}, {rewards}")
+            }
+            
             R = args.gamma * R + rewards[i]
             advantage = R - values[i]
             value_loss = value_loss + 0.5 * advantage.pow(2)
@@ -89,8 +102,8 @@ def train(args, rank=None, shared_model = None):
         
         optimizer.zero_grad()
         
-        (policy_loss + value_loss).backward()
-        torch.nn.utils.clip_grad_norm_(model.parameters(), 40)
+        (policy_loss + 0.5 * value_loss).backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), 30)
 
         ensure_shared_grads(model, shared_model)
         optimizer.step()
