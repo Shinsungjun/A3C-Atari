@@ -16,14 +16,16 @@ train 함수를 각 Process별로 실행
 ### 3. Observation / State Representation
 Observation은 env의 step() 함수를 통해 return되는 observation 값을 이용  
 Observation은 3 x 210 x 160 의 Image로 return됨  
-<img src="images/oberv.png">
+<img src="images/state.png">
 
-Observation을 State로 그대로 사용하기엔 상황마다 변하는 점수표와 위 아래의 테두리와 같이 State에 필요하지 않은 정보를 제외.  
-hand-craft로 위쪽 35번째 pixel부터 사용, 아래쪽 15개의 pixel은 제외하여 state로 정의. 0~255의 값을 가지는 pixel 값을 0 ~ 1의 값을 가지도록 Normalization을 진행. 크기는 160 x 160 의 사이즈를 갖도록 resize하여 고정.  (이미지 첨부)
+Observation을 State로 그대로 사용하기엔 상황마다 변하는 점수표와 위 아래의 테두리와 같이 State에 필요하지 않은 정보가 많기 때문에 제외.  
+
+<img src="images/encode_observ.png">
+hand-craft로 위쪽 35번째 pixel부터 사용, 아래쪽 15개의 pixel은 제외하여 state로 정의. 0~255의 값을 가지는 pixel 값을 0 ~ 1의 값을 가지도록 Normalization을 진행. 크기는 160 x 160 의 사이즈를 갖도록 resize하여 고정.  
 
 Basic Model의 경우 1개의 State만을 Model의 인풋으로 사용. 대신 Model 내부에서 GRUCell을 이용하여 n개의 State를 보는 효과를 가져 옴.  
 
-4개의 State를 Concat하여 Model의 인풋으로도 사용. 결과를 통해 비교  
+4개의 State를 Concat하여 Model의 인풋으로도 사용. 아래 결과를 통해 비교  
 
 ### 4. Model
 Basic Model  (1 State Input)  
@@ -39,6 +41,7 @@ Queue를 이용하여 최근 4개의 State를 Concat하여 모델의 Input으로
 자신의 모델을 선언 후, share Main Model의 Parameter를 덮어 씀.  
 
 Optimizer(Adam 사용)에 share memory parameter를 넣어둠으로써 모든 Process에서 main model을 업데이트 할 수 있도록 optimizer를 선언.  
+<img src="images/optimizer.png">  
 
 모든 Inference는 자신의 모델을 통해 진행.  
 
