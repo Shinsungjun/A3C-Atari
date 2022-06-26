@@ -76,8 +76,8 @@ train에서와는 다르게 torch의 multinomial 함수를 통해 action을 samp
 Wandb  
 Pong, Space Invaders  
 
-Training 초기
-구석에서 암것도 안함
+Training 초기  
+구석에서 암것도 안함  
 
 ### 30분 ~  
 <img src="images/30min~.gif" width="320" height="420">  
@@ -91,5 +91,8 @@ Training 초기
 <img src="images/2hour~.gif" width="320" height="420">  
 
 ### 최종 (3~4시간 이상 학습)  
-무조건 승리  
-<img src="images/3hour~.gif" width="320" height="420">
+승리  
+<img src="images/3hour~.gif" width="320" height="420">  
+
+3시간 ~ 큰 점수차로 승리  
+<img src="images/4hour~.gif" width="320" height="420">

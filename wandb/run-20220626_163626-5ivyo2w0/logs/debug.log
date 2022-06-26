@@ -343,3 +343,5 @@ config: {'lr': 0.0001, 'gamma': 0.99, 'num_processes': 8, 'train_step': 30}
 2022-06-26 19:41:22,765 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
 2022-06-26 19:44:14,593 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
 2022-06-26 19:44:17,038 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:47:16,790 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:47:19,403 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
