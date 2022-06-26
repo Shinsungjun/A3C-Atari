@@ -6,6 +6,9 @@ from utils.util import *
 from main_thread import *
 from train import train
 import argparse
+import wandb
+wandb.login()
+
 
 def parsing__arguments():
     parser = argparse.ArgumentParser(description='KAU - Reinforcement Learning')
@@ -13,8 +16,6 @@ def parsing__arguments():
                         help='learning rate (default: 0.0001)')
     parser.add_argument('--gamma', type=float, default=0.99, metavar='G',
                         help='discount factor for rewards (default: 0.99)')
-    parser.add_argument('--tau', type=float, default=1.00, metavar='T',
-                        help='parameter for GAE (default: 1.00)')
     parser.add_argument('--num_processes', type=int, default=4, metavar='N',
                         help='how many training processes to use (default: 4')
     parser.add_argument('--train_step', type=int, default=20, 
@@ -25,16 +26,18 @@ def parsing__arguments():
 def main(args):
     ## Initial Model, Buffer 
     ## threading 
-    print_title()
+    wandb.init(project='A3C-Atari-Sungjun',name='Pong_4img-v4', config=args, sync_tensorboard=True, settings=wandb.Settings(start_method='thread', console="off"))
     
-    env = gym.make("PongDeterministic-v4")
+    print_title()
+    torch.manual_seed(8967)
+    env = gym.make("Pong-v4")
     
     print_info(env)
     
     # * Make Shared Model (pytorch share_memory)
-    shared_model = A3C(env.observation_space.shape[2], env.action_space)
+    shared_model = A3C(3 * 4, env.action_space)
     shared_model.share_memory()
-        
+    
     processes = []
     for rank in range(args.num_processes):
         p = Process(target=train, args = (args, rank, shared_model))

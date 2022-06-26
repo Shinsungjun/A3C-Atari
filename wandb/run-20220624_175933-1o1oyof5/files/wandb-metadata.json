@@ -1,0 +1,29 @@
+{
+    "os": "Darwin-20.6.0-x86_64-i386-64bit",
+    "python": "3.7.12",
+    "heartbeatAt": "2022-06-24T08:59:33.583001",
+    "startedAt": "2022-06-24T08:59:33.087048",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "--num_processes",
+        "8",
+        "--train_step",
+        "30",
+        "--lr",
+        "0.0001"
+    ],
+    "state": "running",
+    "program": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/Shinsungjun/A3C-Atari.git",
+        "commit": "103219bf1370e91ffee042348c08fcd109ba20da"
+    },
+    "email": "ssjun511@gmail.com",
+    "root": "/Users/holy_joon/ws/Reinforcement/A3C-Atari",
+    "host": "shin-MacBookPro.local",
+    "username": "holy_joon",
+    "executable": "/Users/holy_joon/anaconda3/envs/pyml/bin/python"
+}

@@ -1,0 +1,35 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.18
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.12
+    start_time: 1656217769
+    t:
+      1:
+      - 1
+      - 55
+      3:
+      - 13
+      - 16
+      - 35
+      4: 3.7.12
+      5: 0.12.18
+      8:
+      - 8
+gamma:
+  desc: null
+  value: 0.99
+lr:
+  desc: null
+  value: 0.0001
+num_processes:
+  desc: null
+  value: 8
+train_step:
+  desc: null
+  value: 30

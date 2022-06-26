@@ -1,0 +1,126 @@
+2022-06-19 14:03:53,687 INFO    MainThread:19751 [wandb_init.py:init():525] backend started and connected
+2022-06-19 14:03:53,687 INFO    BackendThr:19751 [internal.py:wandb_internal():93] W&B internal server running at pid: 19751, started at: 2022-06-19 14:03:53.687433
+2022-06-19 14:03:53,688 DEBUG   MainThread:19751 [config_util.py:dict_from_config_file():100] no default config file found in config-defaults.yaml
+2022-06-19 14:03:53,689 INFO    MainThread:19751 [wandb_init.py:init():596] updated telemetry
+2022-06-19 14:03:53,690 INFO    WriterThread:19751 [datastore.py:open_for_write():75] open: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/run-2c0t83qy.wandb
+2022-06-19 14:03:53,692 DEBUG   SenderThread:19751 [sender.py:send():235] send: header
+2022-06-19 14:03:53,709 INFO    MainThread:19751 [wandb_init.py:init():628] communicating run to backend with 30 second timeout
+2022-06-19 14:03:53,713 DEBUG   SenderThread:19751 [sender.py:send():235] send: run
+2022-06-19 14:03:53,956 INFO    MainThread:19751 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-19 14:03:53,958 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: check_version
+2022-06-19 14:03:53,962 INFO    SenderThread:19751 [dir_watcher.py:__init__():205] watching files in: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files
+2022-06-19 14:03:53,962 INFO    SenderThread:19751 [sender.py:_start_run_threads():815] run started: 2c0t83qy with start time 1655615033
+2022-06-19 14:03:53,962 DEBUG   SenderThread:19751 [sender.py:send():235] send: summary
+2022-06-19 14:03:53,962 INFO    SenderThread:19751 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-19 14:03:53,963 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: check_version
+2022-06-19 14:03:54,058 INFO    MainThread:19751 [wandb_run.py:_on_init():1928] got version response 
+2022-06-19 14:03:54,058 INFO    MainThread:19751 [wandb_init.py:init():662] starting run threads in backend
+2022-06-19 14:03:54,059 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: run_start
+2022-06-19 14:03:54,061 DEBUG   HandlerThread:19751 [meta.py:__init__():35] meta init
+2022-06-19 14:03:54,061 DEBUG   HandlerThread:19751 [meta.py:__init__():49] meta init done
+2022-06-19 14:03:54,061 DEBUG   HandlerThread:19751 [meta.py:probe():209] probe
+2022-06-19 14:03:54,062 DEBUG   HandlerThread:19751 [meta.py:_setup_git():199] setup git
+2022-06-19 14:03:54,093 DEBUG   HandlerThread:19751 [meta.py:_setup_git():206] setup git done
+2022-06-19 14:03:54,094 DEBUG   HandlerThread:19751 [meta.py:_save_pip():53] save pip
+2022-06-19 14:03:54,095 DEBUG   HandlerThread:19751 [meta.py:_save_pip():67] save pip done
+2022-06-19 14:03:54,095 DEBUG   HandlerThread:19751 [meta.py:_save_conda():74] save conda
+2022-06-19 14:03:54,966 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/requirements.txt
+2022-06-19 14:03:54,966 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/wandb-summary.json
+2022-06-19 14:03:54,967 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/conda-environment.yaml
+2022-06-19 14:03:57,700 DEBUG   HandlerThread:19751 [meta.py:_save_conda():84] save conda done
+2022-06-19 14:03:57,700 DEBUG   HandlerThread:19751 [meta.py:probe():247] probe done
+2022-06-19 14:03:57,702 DEBUG   SenderThread:19751 [sender.py:send():235] send: files
+2022-06-19 14:03:57,702 INFO    SenderThread:19751 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2022-06-19 14:03:57,717 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-19 14:03:57,717 INFO    MainThread:19751 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-19 14:03:57,718 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: stop_status
+2022-06-19 14:03:57,720 INFO    MainThread:19751 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.OFF
+2022-06-19 14:03:57,721 INFO    MainThread:19751 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-19 14:03:57,998 DEBUG   SenderThread:19751 [sender.py:send():235] send: telemetry
+2022-06-19 14:03:58,012 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/conda-environment.yaml
+2022-06-19 14:03:58,013 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/output.log
+2022-06-19 14:03:58,013 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/wandb-metadata.json
+2022-06-19 14:03:58,529 INFO    Thread-14 :19751 [upload_job.py:push():132] Uploaded file /var/folders/k8/s6lxs_k17lscvq1jjmh1cw080000gn/T/tmp88fso5vhwandb/ow5bqjl8-wandb-metadata.json
+2022-06-19 14:04:00,649 DEBUG   SenderThread:19751 [sender.py:send():235] send: files
+2022-06-19 14:04:00,651 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-19 14:04:00,650 INFO    SenderThread:19751 [sender.py:_save_file():949] saving file media/images/Observation_0_e61b3e8f6fd8cb8d5883.png with policy now
+2022-06-19 14:04:00,652 DEBUG   SenderThread:19751 [sender.py:send():235] send: history
+2022-06-19 14:04:00,653 DEBUG   SenderThread:19751 [sender.py:send():235] send: summary
+2022-06-19 14:04:00,656 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-19 14:04:00,655 INFO    SenderThread:19751 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-19 14:04:00,658 DEBUG   SenderThread:19751 [sender.py:send():235] send: files
+2022-06-19 14:04:00,658 INFO    SenderThread:19751 [sender.py:_save_file():949] saving file media/images/State_1_bef04a47bfc849e758e0.png with policy now
+2022-06-19 14:04:00,659 DEBUG   SenderThread:19751 [sender.py:send():235] send: history
+2022-06-19 14:04:00,660 DEBUG   SenderThread:19751 [sender.py:send():235] send: summary
+2022-06-19 14:04:00,660 INFO    SenderThread:19751 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-19 14:04:01,022 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/wandb-summary.json
+2022-06-19 14:04:01,022 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/media/images/Observation_0_e61b3e8f6fd8cb8d5883.png
+2022-06-19 14:04:01,023 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/media/images/State_1_bef04a47bfc849e758e0.png
+2022-06-19 14:04:01,023 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/media/images
+2022-06-19 14:04:01,024 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/media
+2022-06-19 14:04:01,396 INFO    Thread-17 :19751 [upload_job.py:push():132] Uploaded file /var/folders/k8/s6lxs_k17lscvq1jjmh1cw080000gn/T/tmp88fso5vhwandb/cg3kyx5f-media/images/Observation_0_e61b3e8f6fd8cb8d5883.png
+2022-06-19 14:04:01,399 INFO    Thread-18 :19751 [upload_job.py:push():132] Uploaded file /var/folders/k8/s6lxs_k17lscvq1jjmh1cw080000gn/T/tmp88fso5vhwandb/d3e9ij44-media/images/State_1_bef04a47bfc849e758e0.png
+2022-06-19 14:04:13,012 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-19 14:04:13,013 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: stop_status
+2022-06-19 14:04:22,595 DEBUG   SenderThread:19751 [sender.py:send():235] send: stats
+2022-06-19 14:04:25,078 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/config.yaml
+2022-06-19 14:04:28,275 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-19 14:04:28,275 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: stop_status
+2022-06-19 14:04:34,838 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-19 14:04:34,839 DEBUG   SenderThread:19751 [sender.py:send():235] send: history
+2022-06-19 14:04:34,839 DEBUG   SenderThread:19751 [sender.py:send():235] send: summary
+2022-06-19 14:04:34,841 INFO    SenderThread:19751 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-19 14:04:35,147 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/wandb-summary.json
+2022-06-19 14:04:37,035 INFO    MainThread:19751 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 255
+2022-06-19 14:04:37,039 INFO    MainThread:19751 [wandb_run.py:_restore():1839] restore
+2022-06-19 14:04:37,040 DEBUG   SenderThread:19751 [sender.py:send():235] send: telemetry
+2022-06-19 14:04:37,041 DEBUG   SenderThread:19751 [sender.py:send():235] send: exit
+2022-06-19 14:04:37,041 INFO    SenderThread:19751 [sender.py:send_exit():371] handling exit code: 255
+2022-06-19 14:04:37,042 INFO    SenderThread:19751 [sender.py:send_exit():373] handling runtime: 42
+2022-06-19 14:04:37,042 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-19 14:04:37,044 INFO    SenderThread:19751 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-19 14:04:37,044 INFO    SenderThread:19751 [sender.py:send_exit():379] send defer
+2022-06-19 14:04:37,044 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: poll_exit
+2022-06-19 14:04:37,046 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: defer
+2022-06-19 14:04:37,046 INFO    HandlerThread:19751 [handler.py:handle_request_defer():164] handle defer: 0
+2022-06-19 14:04:37,046 INFO    MainThread:19751 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+  media_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 2515
+  total_bytes: 2515
+}
+
+2022-06-19 14:04:37,047 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: defer
+2022-06-19 14:04:37,048 INFO    SenderThread:19751 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-06-19 14:04:37,048 INFO    SenderThread:19751 [sender.py:transition_state():392] send defer: 1
+2022-06-19 14:04:37,048 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: defer
+2022-06-19 14:04:37,048 INFO    HandlerThread:19751 [handler.py:handle_request_defer():164] handle defer: 1
+2022-06-19 14:04:37,088 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: defer
+2022-06-19 14:04:37,088 INFO    SenderThread:19751 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-06-19 14:04:37,089 INFO    SenderThread:19751 [sender.py:transition_state():392] send defer: 2
+2022-06-19 14:04:37,089 DEBUG   SenderThread:19751 [sender.py:send():235] send: stats
+2022-06-19 14:04:37,090 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: defer
+2022-06-19 14:04:37,090 INFO    HandlerThread:19751 [handler.py:handle_request_defer():164] handle defer: 2
+2022-06-19 14:04:37,090 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: defer
+2022-06-19 14:04:37,090 INFO    SenderThread:19751 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-06-19 14:04:37,090 INFO    SenderThread:19751 [sender.py:transition_state():392] send defer: 3
+2022-06-19 14:04:37,091 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: defer
+2022-06-19 14:04:37,091 INFO    HandlerThread:19751 [handler.py:handle_request_defer():164] handle defer: 3
+2022-06-19 14:04:37,091 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: defer
+2022-06-19 14:04:37,091 INFO    SenderThread:19751 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-06-19 14:04:37,091 INFO    SenderThread:19751 [sender.py:transition_state():392] send defer: 4
+2022-06-19 14:04:37,092 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: defer
+2022-06-19 14:04:37,092 INFO    HandlerThread:19751 [handler.py:handle_request_defer():164] handle defer: 4
+2022-06-19 14:04:37,093 DEBUG   SenderThread:19751 [sender.py:send():235] send: summary
+2022-06-19 14:04:37,094 INFO    SenderThread:19751 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-19 14:04:37,094 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: defer
+2022-06-19 14:04:37,094 INFO    SenderThread:19751 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-06-19 14:04:37,094 INFO    SenderThread:19751 [sender.py:transition_state():392] send defer: 5
+2022-06-19 14:04:37,095 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: defer
+2022-06-19 14:04:37,095 INFO    HandlerThread:19751 [handler.py:handle_request_defer():164] handle defer: 5
+2022-06-19 14:04:37,095 DEBUG   SenderThread:19751 [sender.py:send_request():249] send_request: defer
+2022-06-19 14:04:37,095 INFO    SenderThread:19751 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-06-19 14:04:37,148 DEBUG   HandlerThread:19751 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-19 14:04:37,150 INFO    Thread-10 :19751 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220619_140353-2c0t83qy/files/wandb-summary.json
