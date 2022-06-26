@@ -2475,3 +2475,11 @@
 2022-06-26 19:42:17,709 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
 2022-06-26 19:42:33,036 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
 2022-06-26 19:42:33,037 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:42:36,712 DEBUG   SenderThread:1133 [sender.py:send():235] send: stats
+2022-06-26 19:42:48,545 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-26 19:42:48,546 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:43:04,032 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-26 19:43:04,033 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:43:07,110 DEBUG   SenderThread:1133 [sender.py:send():235] send: stats
+2022-06-26 19:43:19,311 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-26 19:43:19,312 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
