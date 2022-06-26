@@ -2483,3 +2483,15 @@
 2022-06-26 19:43:07,110 DEBUG   SenderThread:1133 [sender.py:send():235] send: stats
 2022-06-26 19:43:19,311 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
 2022-06-26 19:43:19,312 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:43:34,543 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-26 19:43:34,543 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:43:37,512 DEBUG   SenderThread:1133 [sender.py:send():235] send: stats
+2022-06-26 19:43:50,455 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-26 19:43:50,457 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:44:05,897 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-26 19:44:05,898 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:44:07,883 DEBUG   SenderThread:1133 [sender.py:send():235] send: stats
+2022-06-26 19:44:14,590 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-26 19:44:14,591 DEBUG   SenderThread:1133 [sender.py:send():235] send: history
+2022-06-26 19:44:14,591 DEBUG   SenderThread:1133 [sender.py:send():235] send: summary
+2022-06-26 19:44:14,593 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
