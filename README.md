@@ -34,8 +34,9 @@ Basic Model  (1 State Input)
 4 State Model (4 State Input)
 Queue를 이용하여 최근 4개의 State를 Concat하여 모델의 Input으로 사용.
 
-변경 점
-기존의 3->8->16-> ... channel로 늘어나는 convolution layer를, 12(3*4)->16->16-> ... 로 진행. 맨 처음의 3->8과 12->16을 제외하면 동일.  
+변경 점  
+기존의 3->8->16-> ... channel로 늘어나는 convolution layer를,  
+12(3*4)->16->16-> ... 로 진행. 맨 처음의 3->8과 12->16을 제외하면 동일.  
 
 ### 5. Training
 자신의 모델을 선언 후, share Main Model의 Parameter를 덮어 씀.  
