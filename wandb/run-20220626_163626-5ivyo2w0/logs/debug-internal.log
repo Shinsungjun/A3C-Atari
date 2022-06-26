@@ -2448,3 +2448,18 @@
 2022-06-26 19:40:00,074 DEBUG   SenderThread:1133 [sender.py:send():235] send: stats
 2022-06-26 19:40:15,080 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
 2022-06-26 19:40:15,084 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:40:30,328 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-26 19:40:30,328 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:40:30,685 DEBUG   SenderThread:1133 [sender.py:send():235] send: stats
+2022-06-26 19:40:45,691 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-26 19:40:45,692 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:41:00,827 DEBUG   SenderThread:1133 [sender.py:send():235] send: stats
+2022-06-26 19:41:01,162 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-26 19:41:01,163 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:41:16,592 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-26 19:41:16,592 DEBUG   SenderThread:1133 [sender.py:send_request():249] send_request: stop_status
+2022-06-26 19:41:22,739 DEBUG   HandlerThread:1133 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-26 19:41:22,742 DEBUG   SenderThread:1133 [sender.py:send():235] send: history
+2022-06-26 19:41:22,742 DEBUG   SenderThread:1133 [sender.py:send():235] send: summary
+2022-06-26 19:41:22,745 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:41:22,765 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
