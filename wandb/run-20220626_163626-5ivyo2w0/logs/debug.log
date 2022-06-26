@@ -351,3 +351,11 @@ config: {'lr': 0.0001, 'gamma': 0.99, 'num_processes': 8, 'train_step': 30}
 2022-06-26 19:54:02,266 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
 2022-06-26 19:57:34,176 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
 2022-06-26 19:57:37,674 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 20:02:08,190 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 20:02:13,951 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 20:05:08,837 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 20:05:11,473 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 20:11:20,413 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 20:11:20,414 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 20:11:27,122 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 20:12:15,967 INFO    MainThread:1133 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 255

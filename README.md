@@ -25,7 +25,7 @@ hand-craft로 위쪽 35번째 pixel부터 사용, 아래쪽 15개의 pixel은 �
 
 Basic Model의 경우 1개의 State만을 Model의 인풋으로 사용. 대신 Model 내부에서 GRUCell을 이용하여 n개의 State를 보는 효과를 가져 옴.  
 
-4개의 State를 Concat하여 Model의 인풋으로도 사용. 아래 결과를 통해 비교  
+4개의 State를 Concat하여 Model의 인풋으로도 사용. 아래 8. Result 를 통해 비교  
 
 ### 4. Model
 Basic Model  (1 State Input)  
@@ -60,27 +60,46 @@ torch.multinomial() 함수를 이용하여 1개를 sampling하여 action으로 �
 다음과 같이 loss를 구한 뒤,  
 <img src="images/optimize.png">
 
-ensure_shared_grads function -> 1K star를 받은 A3C 코드에서 제공.
+ensure_shared_grads function -> 1K star를 받은 A3C 코드에서 제공.  
 https://github.com/ikostrikov/pytorch-a3c/blob/master/train.py
 
 각 Process의 model에서 생성된 gradient를 shared하고 있는 main model에 넘겨주는 function.  
 
 optimizer는 shared_model의 parameter에 접근하고 있기 때문에 step()을 통해 update를 하면 main model의 parameter가 업데이트 됨. 
 
-### 6. Validation
+### 7. Validation
 python 파일을 실행시킨 Main Process는 main thread.py를 실행하며, rendering 및 main model을 이용한 결과를 확인함.  
 
-train에서와는 다르게 torch의 multinomial 함수를 통해 action을 sampling하지 않고, 가장 확률이 높은 actionㅇ르 하도록 max를 취하여 action을 선택.  
+train에서와는 다르게 torch의 multinomial 함수를 통해 action을 sampling하지 않고, 가장 확률이 높은 action을 하도록 max를 취하여 action을 선택.  
 <img src="images/max_action.png">
 한 에피소드가 종료 되었을 경우 main model의 parameter를 자신의 model에 불러 학습 진행을 확인.
 <img src="images/update_model.png">
 
-### 7. Result
-Wandb  
-Pong, Space Invaders  
+### 8. Result
+Pong  
+학습 Parameter:  
+<img src="images/pong_config.png">  
 
-Training 초기  
+Reward : 
+점수를 잃었을 때 : -1  
+점수를 얻었을 때 : +1  
+  
+Wandb Reward Graph:  
+<img src="images/pong_ablation.png">  
+
+### State에 따른 성적 변화  
+위의 그래프 중, 빨간 그래프는 1개의 이미지를 State로 사용한 경우,  
+파란 그래프는 4개의 이미지를 concat하여 State로 사용한 경우이다.  
+
+그래프를 보면 초기에는 파란 그래프가 학습을 잘 못하는 것처럼 보이지만   
+결국 나중에 승리를 하도록 학습이 빠르게 이루어지는 경우는 파란 그래프, 4장의 Image를 concat한 State를 가졌을 때이다.  
+
+이를 통해 State Representation이 정확하고 많은 정보를 담을수록 RL의 학습이 정확해지고 빨라지는 것을 알 수 있다.  
+
+### 학습 화면  
+### Training 초기  
 구석에서 암것도 안함  
+<img src="images/train_start.gif" width="320" height="420">
 
 ### 30분 ~  
 <img src="images/30min~.gif" width="320" height="420">  
@@ -98,4 +117,16 @@ Training 초기
 <img src="images/3hour~.gif" width="320" height="420">  
 
 3시간 ~ 큰 점수차로 승리  
-<img src="images/4hour~.gif" width="320" height="420">
+<img src="images/4hour~.gif" width="320" height="420">  
+  
+Space Invaders
+학습 Parameter:  
+<img src="images/invader_config.png">  
+
+Reward :  
+적을 처리했을 때 : +0.1  
+목숨을 잃었을 때 : -1  
+  
+Wandb Reward Graph:  
+<img src="images/SpaceInvader.png">  
+reward가 시간이 지남에 따라 상승하는 모습
