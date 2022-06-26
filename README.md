@@ -76,7 +76,7 @@ train에서와는 다르게 torch의 multinomial 함수를 통해 action을 samp
 <img src="images/update_model.png">
 
 ### 8. Result
-Pong  
+### Pong  
 학습 Parameter:  
 <img src="images/pong_config.png">  
 
@@ -119,7 +119,7 @@ Wandb Reward Graph:
 3시간 ~ 큰 점수차로 승리  
 <img src="images/4hour~.gif" width="320" height="420">  
   
-Space Invaders
+### Space Invaders  
 학습 Parameter:  
 <img src="images/invader_config.png">  
 
