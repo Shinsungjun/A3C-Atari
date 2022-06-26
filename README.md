@@ -80,7 +80,7 @@ Training 초기
 구석에서 암것도 안함
 
 30분 ~  
-<img src="images/30min~.gif" width="30" height="60">
+<img src="images/30min~.gif" width="300" height="600">
 1시간 ~  
 움직이면서 슬슬 침
 <img src="images/1hour~.gif">
