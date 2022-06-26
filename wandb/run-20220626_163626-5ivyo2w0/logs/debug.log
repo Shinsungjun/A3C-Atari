@@ -305,3 +305,37 @@ config: {'lr': 0.0001, 'gamma': 0.99, 'num_processes': 8, 'train_step': 30}
 2022-06-26 18:36:22,455 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
 2022-06-26 18:39:12,269 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
 2022-06-26 18:39:14,938 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 18:41:52,036 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 18:41:54,292 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 18:44:21,156 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 18:44:23,177 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 18:46:34,595 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 18:46:36,366 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 18:49:16,834 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 18:49:18,974 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 18:52:46,631 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 18:52:49,819 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 18:55:58,950 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 18:56:01,526 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 18:59:58,079 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:00:02,631 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:02:27,410 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:02:29,536 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:06:51,930 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:06:56,245 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:10:39,797 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:10:43,796 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:14:32,594 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:14:36,702 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:19:09,918 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:19:14,972 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:21:12,779 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:21:14,516 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:24:40,445 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:24:43,213 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:30:13,955 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:30:19,215 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:32:30,379 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:32:32,318 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json
+2022-06-26 19:36:57,259 INFO    SenderThread:1133 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-26 19:37:02,101 INFO    Thread-10 :1133 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/holy_joon/ws/Reinforcement/A3C-Atari/wandb/run-20220626_163626-5ivyo2w0/files/wandb-summary.json

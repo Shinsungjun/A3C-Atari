@@ -73,13 +73,22 @@ train에서와는 다르게 torch의 multinomial 함수를 통해 action을 samp
 <img src="images/update_model.png">
 
 ### 7. Result
+Wandb  
+Pong, Space Invaders  
+
 Training 초기
 구석에서 암것도 안함
+
+30분 ~
+<img src="images/30min~.gif">
 1시간 ~  
-움직이면서 슬슬 침  
+움직이면서 슬슬 침
+<img src="images/1hour~.gif">
 
 2시간 ~  
 점수를 많이 따기 시작  
+<img src="images/2hours~.gif">
 
-최종 (3~4시간 이상 학습)  
-무조건 승리
+최종 (3~4시간 이상 학습)
+무조건 승리  
+<img src="images/3hour~.gif">
